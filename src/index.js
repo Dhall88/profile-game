@@ -7,7 +7,7 @@ import "./index.css";
 
 function App() {
   return (
-      <Canvas camera={{ zoom: 40, position: [0, 0, 500] }}>
+      <Canvas>
         {/* <Suspense
           fallback={}
         >
