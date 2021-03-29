@@ -19,15 +19,16 @@ const Controls = props => {
       
         // If pressed key is our target key then set to true
         function downHandler({ key }) {
+            console.log(key)
           if (key === targetKey) {
-            setKeyPressed(true);
+            setKeyPressed(true)
           }
         }
       
         // If released key is our target key then set to false
         const upHandler = ({ key }) => {
           if (key === targetKey) {
-            setKeyPressed(false);
+            setKeyPressed(false)
           }
         };
       
@@ -80,13 +81,13 @@ const Controls = props => {
 
     useFrame(() => {
         if(forward) {
-            setZ(z-.1)
-        }else if(backward){
-            setZ(z+.1)
-        }else if(right){
-            setX(x-.1)
-        }else if(left){
-            setX(x+.1)
+            setZ(z-.01)
+        } if(backward){
+            setZ(z+.01)
+        } if(right){
+            setX(x-.01)
+        } if(left){
+            setX(x+.01)
         }
     })
 
