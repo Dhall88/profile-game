@@ -28,11 +28,13 @@ const Terrain = () => {
 
   // Raf loop
   useFrame(() => {
-    mesh.current.rotation.z += 0.001;
+    // mesh.current.rotation.z += 0.001;
   });
 
+//   -Math.PI / 2
+
   return (
-    <mesh ref={mesh} rotation={[-Math.PI / 2, 0, 0]}>
+    <mesh ref={mesh} rotation={[0, 0, 0]}>
       <planeBufferGeometry attach="geometry" args={[25, 25, 75, 75]} />
       <meshPhongMaterial
         attach="material"
