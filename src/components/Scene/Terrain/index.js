@@ -28,7 +28,7 @@ const Terrain = () => {
 
   // Raf loop
   useFrame(() => {
-    // mesh.current.rotation.z += 0.001;
+    console.log(camera.current)
   });
 
 //   -Math.PI / 2

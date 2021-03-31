@@ -80,18 +80,23 @@ const Controls = props => {
     // });
 
     useFrame(() => {
+        // camera.current.rotation._y=Math.PI/2
         if(forward) {
-            setZ(z-.01)
+            camera.current.translateZ(-.01)
         } if(backward){
-            setZ(z+.01)
+            camera.current.translateZ(.01)
         } if(right){
-            setX(x-.01)
+            camera.current.translateX(-.01)
         } if(left){
-            setX(x+.01)
+            camera.current.translateX(.01)
         }
+
+        console.log(camera.current.rotation)
     })
 
   const camera = useRef();
+
+  console.log(camera)
 
   return <>
   <PerspectiveCamera makeDefault ref={camera} position={[x,y,z]}/>
