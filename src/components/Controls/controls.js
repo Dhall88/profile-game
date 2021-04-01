@@ -174,7 +174,7 @@ useFrame(()=> {
         }
 
         camera.position.y=5;
-        console.log(camera.rotation)
+        // console.log(camera.rotation)
 })
   return <>
   {/* <PerspectiveCamera makeDefault ref={camera} position={[0,3,0]}/> */}
